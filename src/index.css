@@ -1,13 +1,131 @@
+* {
+  font-family: Inter, system-ui;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Inter, system-ui;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e7f6ff;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+  background: white;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 50px auto;
+}
+header {
+  border-bottom: 1px solid #eaeaea;
+}
+header img {
+  margin-right: 15px;
+}
+header h3, header p {
+  margin: 0;
+}
+.content h1 {
+  margin: 0;
+}
+.cartEmpty {
+  text-align: center;
+}
+.cartEmpty p {
+  width: 280px;
+  line-height: 24px;
+}
+.cartEmpty .greenButton {
+  width: 245px;
+  margin-top: 20px;
+}
+.cartEmpty .greenButton:hover img {
+  transform: rotate(180deg) translateX(3px);
+}
+.cartEmpty .greenButton img {
+  position: relative;
+  top: 1px;
+  transform: rotate(180deg);
+  margin-right: 15px;
+  transition: transform 0.15s ease-in-out;
+}
+.search-block {
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  padding: 0 15px;
+  position: relative;
+}
+.search-block .clear {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  top: 13px;
+}
+.search-block input {
+  border: 0;
+  padding: 13px;
+  font-size: 16px;
+  width: 200px;
+}
+.greenButton {
+  width: 100%;
+  height: 55px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.greenButton:disabled {
+  background-color: #bebebe !important;
+  cursor: default;
+}
+.greenButton:hover {
+  background: #a9da6c;
+}
+.greenButton:active {
+  background: #91d044;
+}
+.cartItem {
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+.cartItem .cartItemImg {
+  height: 70px;
+  width: 70px;
+  background-size: contain;
+  background-position: 0 -5px;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+.cartItem p {
+  font-size: 16px;
+  margin: 0;
+}
+.cartItem b {
+  font-size: 14px;
+}
+.cartItem .removeBtn {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.15s ease-in-out;
+}
+.cartItem .removeBtn:hover {
+  opacity: 1;
+}
+@keyframes button-loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
